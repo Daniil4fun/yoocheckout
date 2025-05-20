@@ -30,6 +30,7 @@
     "license": "MIT",
     "scripts": {
         "serve": "npm run lint && tsc-watch -p tsconfig.json --onSuccess 'node build/index.js'",
+        "prepare": "npm run build",
         "build": "rm -rf build/* && npm run lint && tsc -p ./",
         "lint": "npx tslint --project tsconfig.json --config tslint.json",
         "test:unit": "mocha -r ts-node/register tests/**/*.spec.ts",
